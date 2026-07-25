@@ -36,7 +36,7 @@ def solve_linear(r1, s1, z1, r2, s2, z2, a):
 
 # --- FILE PARSER AND EXECUTION ---
 
-def process_input_file(filename="READ.txt", linear_coefficient=5):
+def process_input_file(filename="BOOG.txt", linear_coefficient=5):
     """
     Reads the target data from file, extracts key pairs,
     and attempts to recover private keys through multiple algorithmic paths.
@@ -106,4 +106,4 @@ def process_input_file(filename="READ.txt", linear_coefficient=5):
 if __name__ == "__main__":
     # If using custom linear challenges, configure the default multiplier scaling factor 'a' here
     default_linear_multiplier = 5
-    process_input_file("READ.txt", linear_coefficient=default_linear_multiplier)
+    process_input_file("BOOG.txt", linear_coefficient=default_linear_multiplier)
