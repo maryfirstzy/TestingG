@@ -121,7 +121,7 @@ def solve_unknown_multiplier_pure_lll(r1, s1, z1, r2, s2, z2):
 
 def run_file_scanner(filename="BOOG.txt"):
     """
-    Validates, parses, and processes target entries from READ.txt
+    Validates, parses, and processes target entries from BOOG.txt
     """
     if not os.path.exists(filename):
         print(f"[-] Input file '{filename}' not found.")
