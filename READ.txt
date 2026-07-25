@@ -1,9 +1,11 @@
-Scanning address: Address: 1TestAddressVulnerableSimulationxx
+
+ -> Scanning address: Address: 1TestAddressVulnerableSimulationxx
  -> Scanning address: R: d345b6e9ceecdc6c16dd25f5e59127196dad9257dfe4733aa0f53de9b428f9eb
  -> Scanning address: S: 067dec09f36fd2a09c2790cbf43c675e78c66c0f6798b5bafe08fd18f6c5d252     -> Scanning address: Z: e1b1cd8c0c2378def96eed5e0d0397a2e6113d0893b9df77606f6239af520fc9    ----------------------------------------                       -> Scanning address: Address: 1TestAddressVulnerableSimulationxx
  -> Scanning address: R: 490f1cc30ef547000dcfc844b80325b256288957232a5d697098aa4c82c03816
  -> Scanning address: S: 5cd3d0794f219d8c7fcc14b54fdab1c9a9bd8a71de5c45d934a0e039333a76e7
  -> Scanning address: Z: a4d4b4dda08a74155970c23af248720c683ffc784983bf2208920ee3c8866bf0
+-------------------------------
 -----------------------------
 1AWrz7ea5ztDhkP9RftDwmGqrhDB6LuqjA
   R: 5e15a44401fcee9a059ba6a8a324b1eda8881e222eeb29cbbad1b873fa785e9f
