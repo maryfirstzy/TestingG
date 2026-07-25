@@ -119,7 +119,7 @@ def solve_unknown_multiplier_pure_lll(r1, s1, z1, r2, s2, z2):
 
 # --- 3. FILE SYSTEM MANAGEMENT ---
 
-def run_file_scanner(filename="READ.txt"):
+def run_file_scanner(filename="BOOG.txt"):
     """
     Validates, parses, and processes target entries from READ.txt
     """
@@ -170,4 +170,4 @@ def run_file_scanner(filename="READ.txt"):
         print("[-] Scanning complete. No low-bound hidden multiplier anomalies resolved in this log batch.")
 
 if __name__ == "__main__":
-    run_file_scanner("READ.txt")
+    run_file_scanner("BOOG.txt")
