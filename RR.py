@@ -1,10 +1,10 @@
 import re
 from ecdsa.curves import SECP256k1
 
-# SECP256k1 Curve Order
-N = SECP256k1.generator.order
+# SECP256k1 Curve Order - Added () to properly call the method and get the integer
+N = SECP256k1.generator.order()
 
-# Paste your precise log data into this multiline string
+# Your precise log data
 raw_log = """
 -------------------------------
  -> Scanning address: Address: 1LFSRp9dhPNV8RSULb5KbzuTB6uMUa4Bd1
@@ -19,15 +19,16 @@ raw_log = """
 """
 
 def parse_and_solve(log_text):
-    # Regex extraction adjusted exactly to your log file lines
+    # Extract hex strings and convert them cleanly to base-16 integers
     r_vals = [int(x, 16) for x in re.findall(r'R:\s*([a-fA-F0-9]+)', log_text)]
     s_vals = [int(x, 16) for x in re.findall(r'S:\s*([a-fA-F0-9]+)', log_text)]
     z_vals = [int(x, 16) for x in re.findall(r'Z:\s*([a-fA-F0-9]+)', log_text)]
     
-    if len(r_vals) < 2:
-        print("Error: Could not parse at least two full transaction profiles.")
+    if len(r_vals) < 2 or len(s_vals) < 2 or len(z_vals) < 2:
+        print("Error: Could not parse at least two full transaction profiles from the log.")
         return
 
+    # Assign distinct variables for the pair calculation
     r1, r2 = r_vals[0], r_vals[1]
     s1, s2 = s_vals[0], s_vals[1]
     z1, z2 = z_vals[0], z_vals[1]
@@ -38,16 +39,17 @@ def parse_and_solve(log_text):
 
     print("[+] Confirmed Classic Nonce Reuse Attack Matrix (R1 == R2).")
     
-    # Step 1: Calculate k = (z1 - z2) / (s1 - s2) mod N
+    # Mathematical calculation: k = (z1 - z2) / (s1 - s2) mod N
     delta_z = (z1 - z2) % N
     delta_s = (s1 - s2) % N
     
     try:
+        # Modular inverse using Fermat's Little Theorem since N is prime
         inv_delta_s = pow(delta_s, N - 2, N)
         k = (delta_z * inv_delta_s) % N
         print(f"[+] Recovered Secret Nonce (k): {hex(k)}")
         
-        # Step 2: Calculate d = (s1 * k - z1) / r mod N
+        # Mathematical calculation: d = (s1 * k - z1) / r mod N
         inv_r = pow(r1, N - 2, N)
         private_key = (((s1 * k) - z1) * inv_r) % N
         
@@ -57,4 +59,5 @@ def parse_and_solve(log_text):
     except ZeroDivisionError:
         print("Execution failed: Modular calculation encountered a division by zero.")
 
-parse_and_solve(raw_log)
+if __name__ == "__main__":
+    parse_and_solve(raw_log)
