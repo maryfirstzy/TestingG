@@ -129,12 +129,12 @@ def run_file_scanner(filename="BOOG.txt"):
         
         # Writes an active linear test vector (a=5) into the file for instant testing
         test_vector = """-------------------------------
- -> Scanning address: Address: 1LinearSimulationTestingAddress
+ -> Scanning address: Address: 1dice8EMZmqKvrGE4Qc9bUFf9PX3xaYDp
  -> Scanning address: R: 1826b5d63f081ed73ce02b0c1630faeef709c0ba025732ef1372afcb41d5e6bf
  -> Scanning address: S: cd23a5e173df82aa301eec956bca70fe15bb2b45cd6ea309bcde31fa1a2c34ff
  -> Scanning address: Z: 3f1a26bc8edc5021aae259cb21edcf1544aae72df486eb4025eafe6cd21bcde3
 ----------------------------------------
- -> Scanning address: Address: 1LinearSimulationTestingAddress
+ -> Scanning address: Address: 1dice8EMZmqKvrGE4Qc9bUFf9PX3xaYDp
  -> Scanning address: R: 74ae63bc51ed42aae00e1236fbce72d415ffec72da51ec43de89fa12cb14b531
  -> Scanning address: S: 9a23fe41caed50bc11ea2bdf23dc58fe72ba56cd2a1ee8c201befe4ca237df12
  -> Scanning address: Z: 7a1e2fbc410ed8ea23be12cbfe14ed583aae01efcbde45aa1a2e3fcbe14b8a21
