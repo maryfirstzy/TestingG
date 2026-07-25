@@ -17,3 +17,14 @@ Address: 1AWrz7ea5ztDhkP9RftDwmGqrhDB6LuqjA
   S: 707db5201fcd95d374c44183fad3bba6cc1a8aa48d9097721eb9c7ddbbc550ef
   Z: d651f469c46c77c0306f88bbe54bdc01f3d952a38ed4399a847c9fc033014994
 ----------------------------------------
+-------------------------------
+ -> Scanning address: Address: 1LinearSimulationTestingAddress
+ -> Scanning address: R: 1826b5d63f081ed73ce02b0c1630faeef709c0ba025732ef1372afcb41d5e6bf
+ -> Scanning address: S: cd23a5e173df82aa301eec956bca70fe15bb2b45cd6ea309bcde31fa1a2c34ff
+ -> Scanning address: Z: 3f1a26bc8edc5021aae259cb21edcf1544aae72df486eb4025eafe6cd21bcde3
+----------------------------------------
+ -> Scanning address: Address: 1LinearSimulationTestingAddress
+ -> Scanning address: R: 74ae63bc51ed42aae00e1236fbce72d415ffec72da51ec43de89fa12cb14b531
+ -> Scanning address: S: 9a23fe41caed50bc11ea2bdf23dc58fe72ba56cd2a1ee8c201befe4ca237df12
+ -> Scanning address: Z: 7a1e2fbc410ed8ea23be12cbfe14ed583aae01efcbde45aa1a2e3fcbe14b8a21
+-------------------------------
